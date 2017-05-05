@@ -1,17 +1,17 @@
 let contacts = require('./models').contacts
-let bitches = require('./models').bitches
+let stitches = require('./models').stitches
 
 // contacts.create({
 //   name: 'colin',
-//   type: 'supa bitch',
+//   type: 'supa stitch',
 //   number: '1000',
 //   createdAt: 1999-01-08,
 //   updatedAt: 1999-01-08
 // })
 
-bitches.create({
-  bitch_id: 1,
-  bitchfriend: 'some bitch',
+stitches.create({
+  stitch_id: 1,
+  stitchfriend: 'some stitch',
   number: '1000',
   createdAt: 1999-01-08,
   updatedAt: 1999-01-08

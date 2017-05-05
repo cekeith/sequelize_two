@@ -1,23 +1,23 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('bitches', {
+    return queryInterface.createTable('stitches', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      bitch_id: {
+      stitch_id: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'contacts',
           key: 'id',
-          as: 'bitch_id'
+          as: 'stitch_id'
       }
     },
-      bitchfriend: {
+      stitchfriend: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -31,6 +31,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('bitches');
+    return queryInterface.dropTable('stitches');
   }
 };

@@ -1,17 +1,17 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var bitches = sequelize.define('bitches', {
-    bitch_id: DataTypes.INTEGER,
-    bitchfriend: DataTypes.STRING
+  var stitches = sequelize.define('stitches', {
+    stitch_id: DataTypes.INTEGER,
+    stitchfriend: DataTypes.STRING
   }, {
     classMethods: {
         associate: function(models) {
-          bitches.belongsTo(models.contacts,{
-            foreignKey: 'bitch_id',
+          stitches.belongsTo(models.contacts,{
+            foreignKey: 'stitch_id',
             onDelete: 'CASCADE'
           })
       }
     }
   });
-  return bitches;
+  return stitches;
 };
